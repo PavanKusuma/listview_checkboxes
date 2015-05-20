@@ -1,0 +1,24 @@
+import java.util.Calendar;
+import java.util.GregorianCalendar;
+import java.util.Date;
+
+class Ok{
+
+public static void main(String args[]){
+
+Calendar c=new GregorianCalendar();
+Date presentDate=c.getTime();
+c.add(Calendar.DATE, 30);
+Date expiryDate=c.getTime();
+
+System.out.println(presentDate +  " ---- " + expiryDate);
+
+if(presentDate.compareTo(expiryDate) >= 0){
+System.out.println("true");
+
+}
+else {
+System.out.println("false");
+}
+}
+}
